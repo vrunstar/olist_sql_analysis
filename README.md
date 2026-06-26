@@ -153,3 +153,9 @@ olist-sql-analysis/
 - MySQL CLI
 - VS Code
 - Kaggle (Olist Brazilian E-Commerce dataset)
+
+---
+
+## Roadmap
+- Interactive Dash dashboard with KPI cards, revenue trends,
+  RFM segment breakdown, and delivery heatmap connected to live MySQL queries
