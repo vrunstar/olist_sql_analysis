@@ -15,56 +15,7 @@ End-to-end SQL analysis of a Brazilian e-commerce platform using the Olist publi
 
 ## Schema
 
-```
-customers
-    customer_id (PK)
-    customer_unique_id
-    customer_zip_code_prefix
-    customer_city
-    customer_state
-         |
-         | 1:N
-         v
-orders
-    order_id (PK)
-    customer_id (FK)
-    order_status
-    order_purchase_timestamp
-    order_approved_at
-    order_delivered_carrier_date
-    order_delivered_customer_date
-    order_estimated_delivery_date
-         |
-         | 1:N
-         v
-order_items
-    order_id (FK)
-    order_item_id
-    product_id (FK)
-    seller_id
-    shipping_limit_date
-    price
-    freight_value
-         |
-         | N:1
-         v
-products
-    product_id (PK)
-    product_category_name (FK)
-    product_name_length
-    product_description_length
-    product_photos_qty
-    product_weight_g
-    product_length_cm
-    product_height_cm
-    product_width_cm
-         |
-         | N:1
-         v
-categories
-    product_category_name (PK)
-    product_category_name_english
-```
+![ERD](assets/erd.png)
 
 ---
 
@@ -153,9 +104,3 @@ olist-sql-analysis/
 - MySQL CLI
 - VS Code
 - Kaggle (Olist Brazilian E-Commerce dataset)
-
----
-
-## Roadmap
-- Interactive Dash dashboard with KPI cards, revenue trends,
-  RFM segment breakdown, and delivery heatmap connected to live MySQL queries
